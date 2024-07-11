@@ -22,6 +22,3 @@ jobs:
 
     - name: Build docker image
       run: docker build -t lucasgouveia/nlw.journey.api:${{ steps.generate_sha.outputs.sha }} .
-
-      # logar no container registry
-      # enviar imagem aós

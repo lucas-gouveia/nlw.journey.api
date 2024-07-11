@@ -1,0 +1,26 @@
+TECNOLOGIA: go
+VERSÃO: 1.22.4
+PORTA: 8080
+
+POSTGRES
+
+dev
+    preparação
+        - go mod download & go mod verify - comando para instalar as dependencias e veriricar as dependencias
+
+    execução
+        - go run cmd/journey/journey.go - execução da aplicação 
+
+prod 
+    preparação prod - dockerfile
+        - go mod download & go mod verify - comando para instalar as dependencias e veriricar as dependencias
+        - go build cmd/journey/journey.go - comando para buildar a aplicação
+
+    execução
+        - rodar app (journey (windows))
+
+
+
+
+
+docker buildx build -t golang:1.22.4-alpine .
